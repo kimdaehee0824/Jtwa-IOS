@@ -1,0 +1,6 @@
+framework module Pods_Jtwa_IOS_Jtwa_IOSUITests {
+  umbrella header "Pods-Jtwa-IOS-Jtwa-IOSUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
