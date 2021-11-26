@@ -20,40 +20,42 @@
                                 <rect key="frame" x="30" y="148" width="354" height="220"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5cO-5B-rgF">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="220"/>
+                                        <rect key="frame" x="3" y="3" width="348" height="214"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="5cO-5B-rgF" secondAttribute="trailing" id="4hg-pV-2wY"/>
-                                    <constraint firstAttribute="bottom" secondItem="5cO-5B-rgF" secondAttribute="bottom" id="5Ve-Cg-ScG"/>
-                                    <constraint firstItem="5cO-5B-rgF" firstAttribute="leading" secondItem="uia-Qa-apT" secondAttribute="leading" id="5yY-KD-NeB"/>
+                                    <constraint firstAttribute="bottom" secondItem="5cO-5B-rgF" secondAttribute="bottom" constant="3" id="92F-Qv-sfM"/>
+                                    <constraint firstAttribute="trailing" secondItem="5cO-5B-rgF" secondAttribute="trailing" constant="3" id="NmF-XI-fsD"/>
+                                    <constraint firstItem="5cO-5B-rgF" firstAttribute="leading" secondItem="uia-Qa-apT" secondAttribute="leading" constant="3" id="mc3-KY-uxs"/>
                                     <constraint firstAttribute="height" constant="220" id="p8B-6R-tbh"/>
-                                    <constraint firstItem="5cO-5B-rgF" firstAttribute="top" secondItem="uia-Qa-apT" secondAttribute="top" id="zVB-ef-tRN"/>
+                                    <constraint firstItem="5cO-5B-rgF" firstAttribute="top" secondItem="uia-Qa-apT" secondAttribute="top" constant="3" id="sMX-9R-UtD"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gVR-fV-C1e">
                                 <rect key="frame" x="30" y="428" width="354" height="220"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="phW-7n-nFC">
-                                        <rect key="frame" x="0.0" y="0.0" width="354" height="220"/>
+                                        <rect key="frame" x="3" y="3" width="348" height="214"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="tintColor" systemColor="labelColor"/>
                                         <color key="textColor" systemColor="labelColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="secondarySystemFillColor"/>
                                 <constraints>
-                                    <constraint firstItem="phW-7n-nFC" firstAttribute="leading" secondItem="gVR-fV-C1e" secondAttribute="leading" id="BOV-5m-sCh"/>
-                                    <constraint firstItem="phW-7n-nFC" firstAttribute="top" secondItem="gVR-fV-C1e" secondAttribute="top" id="G4w-DG-zQ1"/>
+                                    <constraint firstItem="phW-7n-nFC" firstAttribute="top" secondItem="gVR-fV-C1e" secondAttribute="top" constant="3" id="4cj-0g-7w2"/>
+                                    <constraint firstItem="phW-7n-nFC" firstAttribute="leading" secondItem="gVR-fV-C1e" secondAttribute="leading" constant="3" id="U13-hF-GfE"/>
                                     <constraint firstAttribute="height" constant="220" id="Zi5-jV-2rn"/>
-                                    <constraint firstAttribute="trailing" secondItem="phW-7n-nFC" secondAttribute="trailing" id="mw8-ly-lzR"/>
-                                    <constraint firstAttribute="bottom" secondItem="phW-7n-nFC" secondAttribute="bottom" id="tQq-NY-vZv"/>
+                                    <constraint firstAttribute="trailing" secondItem="phW-7n-nFC" secondAttribute="trailing" constant="3" id="m26-aN-gXK"/>
+                                    <constraint firstAttribute="bottom" secondItem="phW-7n-nFC" secondAttribute="bottom" constant="3" id="ubE-bv-rXr"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8hK-e4-nHx">
@@ -61,11 +63,16 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="EJa-en-Kht"/>
                                 </constraints>
-                                <color key="tintColor" systemColor="labelColor"/>
+                                <color key="tintColor" systemColor="secondaryLabelColor"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="번역하기"/>
+                                <buttonConfiguration key="configuration" style="filled" title="번역하기">
+                                    <color key="baseBackgroundColor" systemColor="secondaryLabelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="sendPstButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMM-Ii-iI5"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAK-OF-JoP">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일본어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AAK-OF-JoP">
                                 <rect key="frame" x="112" y="107" width="191" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="191" id="3Dv-ia-otA"/>
@@ -75,7 +82,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="일본어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYX-7I-q1k">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="영어" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QYX-7I-q1k">
                                 <rect key="frame" x="112" y="387" width="191" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="26" id="62B-8k-rHp"/>
@@ -107,6 +114,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="tmp-Iy-jpb"/>
+                    <connections>
+                        <outlet property="enTextView" destination="5cO-5B-rgF" id="YDE-aX-MEt"/>
+                        <outlet property="enView" destination="uia-Qa-apT" id="XQf-5H-bQg"/>
+                        <outlet property="jpTextView" destination="phW-7n-nFC" id="dAb-8Z-5a2"/>
+                        <outlet property="jpView" destination="gVR-fV-C1e" id="NwY-fB-J6N"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,6 +147,9 @@
     <resources>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
